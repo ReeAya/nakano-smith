@@ -1,0 +1,28 @@
+.sec__inner:not(:last-child) {
+    margin-bottom: var(--block-01);
+}
+
+
+@media screen and (min-width: 1024px) {
+    .sec-01__item {
+        width: 188px;
+        gap: 1.5rem;
+    }
+
+    .sec-01__box {
+        /* padding-top: 2rem; */
+    }
+}
+
+.sec-11__wrapper {
+    overflow: hidden;
+}
+
+.sec-12__btn {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sec-01__title-area {
+    /* margin-bottom: var(--parts-03); */
+}

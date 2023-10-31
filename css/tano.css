@@ -1,0 +1,190 @@
+/** u-101 **/
+.u-101__title {
+    display: inline-block;
+    font-size: var(--title-01);
+}
+.u-101__title-01:not(:last-child) {
+    margin-bottom: .2em;
+}
+.u-101__title-01 {
+    display: block;
+    color: var(--color-007);
+    padding-bottom: 0.3em;
+    text-align: center;
+}
+.u-101__title-area {
+    text-align: center;
+}
+.u-101__eng {
+    font-size: 0.55em;
+    letter-spacing: 0.05em;
+    color: var(--color-004);
+}
+/** u-102 **/
+.u-102__flow {
+    counter-reset: number 0;
+    margin-top: 40px;
+    padding-left: 88px;
+}
+.u-102__flex {
+    position: relative;
+}
+.u-102__item-figure {
+    margin: 24px 0;
+}
+.u-102__item-content {
+    transform: translateX(1rem);
+    padding: 8px 0 40px;
+}
+.u-102__item-content::before {
+    counter-increment: number 1;
+    content: "0" counter(number);
+    position: absolute;
+    font-size: 30px;
+    letter-spacing: -0.03em;
+    width: 76px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    border-radius: 50%;
+    left: -96px;
+    background: var(--color-008);
+    color: #fff;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN", "MS P明朝", serif;
+}
+.u-102__item-content::after {
+    content: "";
+    border-left: 2px solid var(--color-008);
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -58px;
+}
+.u-102__item-title {
+    font-size: var(--title-03);
+    color: var(--color-007);
+}
+.u-102__item-text {
+    padding-right: 24px;
+    text-align: justify;
+}
+.u-102__completion {
+    display: flex;
+    border: 2px solid var(--color-008);
+    color: var(--color-008);
+    background: #fff;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.2em;
+    line-height: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    border-radius: 64px;
+}
+
+
+@media screen and (min-width: 768px) {
+/** u-101 **/
+    .u-101__title-01:not(:last-child) {
+        margin-bottom: 0;
+    }
+/** u-102 **/
+    .u-102__flow {
+        margin-top: 24px;
+        padding-left: 0;
+        padding-bottom: 64px;
+        position: relative;
+    }
+    .u-102__flow::after {
+        content: "";
+        border-left: 2px solid var(--color-008);
+        width: auto;
+        height: 64px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .u-102__flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .u-102__item-box {
+        max-width: 329px;
+    }
+    .u-102__item-text {
+        padding-right: 0;
+    }
+    .u-102__flex:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .u-102__flex:nth-child(even) .u-102__item-box {
+        margin-left: auto;
+    }
+    .u-102__flex:nth-child(even) .u-102__item-title {
+        text-align: right;
+    }
+    .u-102__item-figure {
+        margin: 0;
+        width: 41%;
+    }
+    .u-102__item-content {
+        transform: unset;
+        width: 41%;
+    }
+    .u-102__item-content::before {
+        width: 110px;
+        height: 110px;
+        font-size: 50px;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+    }
+    .u-102__item-content::after {
+        transform: translate(-50%, 0);
+        left: 50%;
+    }
+    .u-102__flex:first-child .u-102__item-content::after {
+        height: 50%;
+        top: unset;
+        bottom: 0;
+    }
+    .u-102__item-title {
+        margin-bottom: 16px;
+    }
+    .u-102__completion {
+        width: 625px;
+        margin: auto;
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1280px) {}
+
+@media screen and (min-width: 1366px) {}
+
+@media screen and (min-width: 768px) and (max-width: 1359px) {
+    .u-102__inner {
+        max-width: 1200px;
+        width: 100%;
+    }
+    .u-102__flow {
+        width: calc(100% - 88px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .u-102__item-content::before {
+        width: 80px;
+        height: 80px;
+        font-size: 38px;
+    }
+}

@@ -1,0 +1,451 @@
+.nav-pc__wrapper {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-pc__wrapper {
+        padding: 0 16px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+        background-color: #ffffff83;
+        width: 100%;
+        backdrop-filter: blur(16px);
+    }
+
+    .nav-pc__logo {
+        padding: 16px 0;
+        display: block;
+        width: 400px;
+        max-width: 100%;
+    }
+
+    .nav-pc__logo img {
+        width: 100%;
+    }
+
+    .nav-pc__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-pc__item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 16px;
+    }
+
+    .nav-pc__item-block-02 {
+        display: flex;
+        gap: 16px;
+    }
+
+    .nav-pc__item-block-01 {
+        flex: 1;
+    }
+
+    .nav-pc__item-block-02 {
+        flex: 1;
+    }
+
+    .gnav__btn-img {
+        width: 24px;
+    }
+
+    .nav-pc__btn-03:hover .gnav__btn-img {
+        filter: brightness(0) invert(1);
+    }
+
+    .nav-pc__btn-03:hover {
+        background-color: var(--color-006);
+        color: #fff;
+    }
+
+    .nav-pc__btn-03 {
+        padding: 16px 8px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        flex-direction: column;
+        gap: 8px;
+        font-weight: bold;
+        font-size: .9em;
+        white-space: nowrap;
+        color: var(--color-006);
+    }
+
+    .nav-pc__btn-03-02 {
+        font-size: .7em;
+        letter-spacing: .1em;
+    }
+
+    .nav-pc__item-block-01 {
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+    }
+
+    .nav-pc__btn-01 {
+        padding: 4px;
+        width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, .2);
+        gap: 8px;
+        font-size: 21px;
+        font-weight: bold;
+        border-radius: 8px;
+        color: var(--color-006);
+    }
+
+    .nav-pc__btn-02-img img {
+        width: 100%;
+    }
+
+    .nav-pc__btn-02-img {
+        margin: 0;
+        height: 32px;
+        width: 32px;
+    }
+
+    .nav-pc__btn-02 {
+
+        width: 250px;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, .2);
+        background-color: var(--color-006);
+        color: #fff;
+        gap: 8px;
+        border-radius: 8px;
+        letter-spacing: .16em;
+    }
+
+    .js-active .nav-pc__item-block-01 {
+        display: none;
+    }
+
+    .js-active .nav-pc__logo {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .js-active .nav-pc__item {
+        padding-top: 0;
+    }
+
+    .js-active .nav-pc__wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        animation-name: pc_menu;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+}
+
+@keyframes pc_menu {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes conv01 {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes conv02 {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.conv-01__block {
+    display: none;
+}
+
+.conv-02__block {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .conv-01__block {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        gap: 16px;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+
+        z-index: 9999;
+
+    }
+
+    .conv-02__block {
+        display: none;
+        position: fixed;
+        bottom: 16px;
+        left: 16px;
+        gap: 16px;
+        width: auto;
+        justify-content: flex-start;
+
+        z-index: 9999;
+        width: 565px;
+    }
+
+    .js-active .conv-02__block {
+        display: flex;
+        animation-name: conv02;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .js-active .conv-01__block {
+        display: flex;
+        animation-name: conv01;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+
+
+@media screen and (min-width: 1280px) {
+    .nav-pc__btn-03 {
+        width: 130px;
+        font-size: 1em;
+    }
+
+    .conv-01__block {
+        width: auto;
+    }
+}
+
+/*! CSS Used from: https://nakanodent.com/renew/wp-content/cache/wpfc-minified/9a4ix1kr/40v6.css ; media=all */
+@media all {
+    #sub__page .menu__btn-img img {
+        vertical-align: unset;
+    }
+
+    .menu__btn-area {
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "BIZ UDPGothic", Meiryo, sans-serif;
+        line-height: 1;
+        color: #444;
+        text-align: justify;
+        font-size: 15px;
+        letter-spacing: 0.08em;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .menu__btn-area {
+            bottom: -88px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .menu__wrapper {
+        display: none;
+    }
+}
+
+.menu__btn-area {
+    position: fixed;
+    z-index: 99999;
+    bottom: -72px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    transition: ease all 0.5s;
+}
+
+.menu__btn-area.fix__float {
+    bottom: 0;
+}
+
+.menu__btn {
+    font-weight: 500;
+    transition: ease all 0.5s;
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 60px;
+    padding-bottom: 11px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    padding-top: 2px;
+}
+
+.menu__btn-img img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center center;
+    object-position: center center;
+    height: 100%;
+}
+
+.menu__btn-img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+}
+
+.menu__btn-txt {
+    display: block;
+    text-align: center;
+    font-size: 2.8vw;
+}
+
+@media screen and (min-width: 375px) {
+    .menu__btn-txt {
+        font-size: 10px;
+    }
+}
+
+.menu__btn-parts-area {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+}
+
+.menu__btn-parts {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: var(--color-001);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu__btn-parts-01 {
+    left: 0;
+}
+
+.menu__btn-parts-02 {
+    left: 10px;
+}
+
+.menu__btn-parts-03 {
+    right: 0;
+}
+
+.menu__btn-tel .menu__btn-img {
+    top: 8px;
+    width: 16px;
+    height: 22px;
+}
+
+.menu__btn-access .menu__btn-img {
+    top: 7px;
+    width: 16px;
+    height: 22px;
+}
+
+.menu__btn-web .menu__btn-img {
+    top: 12px;
+    width: 33px;
+    height: 33px;
+}
+
+.menu__btn-web {
+    background-color: var(--color-006);
+    height: 72px;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+}
+
+.menu-btn-active-yes {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .menu__btn-txt {
+        font-size: 14px;
+    }
+
+    .menu__btn {
+        height: 72px;
+    }
+
+    .menu__btn.menu__btn-web {
+        height: 80px;
+    }
+
+    .menu__btn:hover {
+        height: 80px;
+        background-color: rgb(238, 238, 238);
+        opacity: 1;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .menu__btn-web:hover {
+        background-color: var(--color-006);
+        opacity: 0.8;
+    }
+}
+
+.js__menu-area {
+    display: none;
+}
+
+.js__menu-active.js__menu-area {
+    display: block;
+}
+
+@media screen and (min-width: 1024px) {
+    .js__menu-active.js__menu-area {
+        display: none;
+    }
+}
+
+.hdr__logo-txt {
+    display: block;
+    font-size: .8em;
+    margin-top: .8em;
+    line-height: 1.8;
+}
